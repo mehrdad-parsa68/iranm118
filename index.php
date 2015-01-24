@@ -185,7 +185,7 @@
             </div>
         </div>
         
-        
+        <p class="text-center social"><a href="#"><img src="images/fb.png"></a><a href="#"><img src="images/tw.png"></a><a href="#"><img src="images/go.png"></a></p>
     </footer>
     <div class="footer-end">
         	<h5 class="text-center">تمامی حقوق این وب سایت متعلق به شرکت یگانه نوآوران پویا می باشد.</h5>
