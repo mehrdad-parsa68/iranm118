@@ -11,6 +11,9 @@ body{
     font-family: koodak, "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:17px;
 	color:#2F2F2F;
+	background-color:#F7F6F1 !important;
+	margin:0;
+	padding:0;
 
 }
 .navbar-default {
@@ -62,4 +65,44 @@ body{
 	}
 .navbar-brand{
 	padding:2px;
+	}
+footer{
+	margin-top:400px;
+	border-top:2px solid #FACE0E;
+	background-color:#1D1D1D;
+	color:#FFF;
+	margin-right:50px;
+	height:300px;
+	border-bottom:1px solid #FACE0E;
+	}
+footer ul li{
+	list-style-type:none;
+	line-height:30px;
+	}
+footer ul li a{
+	list-style-type:none;
+	color:#FFF;
+	font-size:15px;
+	}	
+footer ul li a:hover{
+	list-style-type:none;
+	color:#FACE0E;
+	text-decoration:none;
+	}
+footer hr {
+	border-color:#FACE0E !important;
+	}
+.footer-end{
+	background-color:#111111 !important;
+	color:#FFF;
+	height:80px;
+	padding-top:10px;
+	
+	}
+.footer-end a {
+	color:#FACE0E;
+	}
+.footer-end a:hover {
+	color:#FACE0E;
+	text-decoration:none;
 	}

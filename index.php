@@ -43,8 +43,8 @@
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="جتسجو بر اساس نام شغل، تلفن">
-          <input type="text" class="form-control" placeholder="نزدیک">
+          <input type="text" class="form-control" placeholder="شغل، زمینه فعالیت یا تلفن">
+          <input type="text" class="form-control" placeholder="نام شهر یا معابر">
         </div>
         <button type="submit" class="btn btn-default btn-search">جستجو</button>
       </form>
@@ -159,7 +159,38 @@
                 </div>
             </div>
         </div>
-    
+    <footer>
+    	<div class="container text-center">
+        	<div class="col-sm-8 pull-right">
+            	<h2>لینک های مرتبط</h2>
+                <hr>
+                <ul class="col-sm-6 text-center pull-right">
+                	<li><a href="#">درباره ایران 118</a></li>
+                    <li><a href="#">سفارش آگهی</a></li>
+                    <li><a href="#">تعرفه آگهی‌</a></li>
+                    <li><a href="#">استخدام</a></li>
+                    
+                </ul>
+                <ul class="col-sm-6 text-center pull-right">
+                	<li><a href="#">حریم شخصی کاربران</a></li>
+                    <li><a href="#">فهرست مشاغل</a></li>
+                    <li><a href="#">شرایط استفاده</a></li>
+                    <li><a href="#">شبکه اجتماعی</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col-sm-4 pull-right">
+           		<h2>ارتباط با ما</h2>
+                <hr>
+            </div>
+        </div>
+        
+        
+    </footer>
+    <div class="footer-end">
+        	<h5 class="text-center">تمامی حقوق این وب سایت متعلق به شرکت یگانه نوآوران پویا می باشد.</h5>
+            <h5 class="text-center">طراح : <a href="http://rayweb.ir">رای وب</a></h5>
+        </div>
    	
    
 
@@ -224,7 +255,7 @@
                             $(this).remove();
                         });
                     }
-                ).attr('src','images/'+info_elem.find('.info_image').html()).attr('width','1424').attr('height','500')
+                ).attr('src','images/'+info_elem.find('.info_image').html()).attr('width','1424').attr('height','400')
                 );
                 }
             });

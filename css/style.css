@@ -7,7 +7,7 @@
     color:#fff;
     text-transform:uppercase;
     letter-spacing:-1px;
-    border:1px solid #f0f0f0;
+    border:1px solid #FACE0E;
     overflow:hidden;
 	margin-right:80px;
 	margin-top:50px;
@@ -23,7 +23,7 @@ img.bg{
     right:0px;
     top:0px;
     margin-top:6px;
-    z-index:999999;
+    z-index:1020;
 }
 .rotator ul li{
     display:block;
