@@ -1,0 +1,47 @@
+@font-face {
+    font-family:'koodak';
+    src:url('../fonts/BKoodakBold.eot');
+    src:url('../fonts/BKoodakBold.eot#iefix') format('eot'),url('../fonts/BKoodakBold.woff') format('woff'),url('../fonts/BKoodakBold.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+body{
+ 	direction:rtl;
+	background:#fff none repeat fixed;
+    font-family: koodak, "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:17px;
+	color:#2F2F2F;
+
+}
+.navbar-default {
+	background-color:#FACE0E;
+	border:1px solid #000 !important;
+	box-shadow:0px 1px 3px #960;
+	min-height:50px;
+	}
+.btn-search {
+	background-color:#2F2F2F;
+	color:#FACE0E;
+	border:1px solid #5A5A5A;
+	}
+.btn-search:hover {
+	background-color:#000;
+	color:#FACE0E;
+	border:1px solid #5A5A5A;
+	}
+.navbar-default .navbar-nav > li > a {
+	color:#2F2F2F;
+	}
+.navbar-default .navbar-nav > li > a:hover {
+	color:#000;
+	}
+.nav-right {
+	width:80px;
+	background-color:#2F2F2F;
+	border:1px solid #000 !important;
+	right:0;
+	position:fixed;
+	top:0;
+	height:100%;
+	border-left:1px solid #5A5A5A;
+	}
