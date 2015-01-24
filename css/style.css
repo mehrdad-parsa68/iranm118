@@ -3,7 +3,7 @@
     height:300px;
     margin:0px auto;
     position:relative;
-    font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+    font-family:'koodak';
     color:#fff;
     text-transform:uppercase;
     letter-spacing:-1px;
@@ -70,6 +70,7 @@ img.bg{
     font-weight:normal;
     font-size:46px;
     padding:20px;
+	text-align:center;
 }
 .rotator .description{
     width:500px;
@@ -91,6 +92,7 @@ img.bg{
     text-transform:none;
     letter-spacing:normal;
     line-height:26px;
+	text-align:center;
 }
 a.more{
     color:orange;

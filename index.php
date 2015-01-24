@@ -63,32 +63,24 @@
 	<div class="rotator" dir="ltr">
                 <ul id="rotmenu">
                     <li>
-                        <a href="rot1">Portfolio</a>
+                        <a href="rot1">بانک مشاغل ایران</a>
                         <div style="display:none;">
                             <div class="info_image">1.jpg</div>
-                            <div class="info_heading">Our Works</div>
+                            
                             <div class="info_description">
-				 At vero eos et accusamus et iusto odio
-				dignissimos ducimus qui blanditiis praesentium
-				voluptatum deleniti atque corrupti quos dolores et
-				quas molestias excepturi sint occaecati cupiditate
-				non provident... 
-                                <a href="#" class="more">Read more</a>
+				 مرجع کامل مشاغل ایران  
+                                
                             </div>
                         </div>
                     </li>
                     <li>
-                        <a href="rot2">Services</a>
+                        <a href="rot2">جستجوی پیشرفته</a>
                         <div style="display:none;">
                             <div class="info_image">2.jpg</div>
-                            <div class="info_heading">We serve</div>
+                            
                             <div class="info_description">
-				 At vero eos et accusamus et iusto odio
-				dignissimos ducimus qui blanditiis praesentium
-				voluptatum deleniti atque corrupti quos dolores et
-				quas molestias excepturi sint occaecati cupiditate
-				non provident...
-                                <a href="#" class="more">Read more</a>
+				با جستجوی پیشرفته تنها با یک کلیک به نتیجه مورد نظر دست پیدا کنید
+                               
                             </div>
                         </div>
                     </li>
@@ -215,7 +207,7 @@
                             $(this).remove();
                         });
                     }
-                ).attr('src','images/'+info_elem.find('.info_image').html()).attr('width','800').attr('height','300')
+                ).attr('src','images/'+info_elem.find('.info_image').html()).attr('width','1424').attr('height','400')
                 );
                 }
             });
