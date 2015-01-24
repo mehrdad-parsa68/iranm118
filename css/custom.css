@@ -45,3 +45,6 @@ body{
 	height:100%;
 	border-left:1px solid #5A5A5A;
 	}
+.navbar-brand{
+	padding:2px;
+	}

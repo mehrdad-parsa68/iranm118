@@ -1,66 +1,54 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>بانک مشاغل ایران</title>
-    <meta name="keywords" contenet="برین ,برین کارت ,کارت تخفیف , تخفیف کارت ,بیشترین تخفیف, کارت تخفیف برین" http-equiv="Content-Type" content="text/html">
-    <meta name="description" content="برین ,برین کارت ,کارت تخفیف , تخفیف کارت ,بیشترین تخفیف, کارت تخفیف برین">
-    <meta name="author" content="rayweb.ir">
-    <link rel="icon" href="{$obj->site_address}favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/slider.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-      	<img src="images/logo.png" width="50">
-      </a>
-    </div>
+    <head>
+        <title>Pretty Simple Content Slider with jQuery and CSS3</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Pretty Simple Content Slider with jQuery and CSS3" />
+        <meta name="keywords" content="jquery,css3, content slider, slide, auto-play"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Arial;
+                background:#C1C7D5 url(title.png) no-repeat top center;
+            }
+            a.back{
+                background:transparent url(back.png) no-repeat top left;
+                position:fixed;
+                width:150px;
+                height:27px;
+                outline:none;
+                bottom:0px;
+                left:0px;
+            }
+            #content{
+                margin:150px auto 10px auto;
+            }
+            .reference{
+                clear:both;
+                width:800px;
+                margin:30px auto;
+            }
+            .reference p a{
+                text-transform:uppercase;
+                text-shadow:1px 1px 1px #fff;
+                color:#666;
+                text-decoration:none;
+                font-size:10px;
+            }
+            .reference p a:hover{
+                color:#333;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <a class="back" href=""></a>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#"><i class="fa fa-plus" style="font-size:14px"></i> ثبت آگهی رایگان در سایت</a></li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="جتسجو بر اساس نام شغل، تلفن">
-          <input type="text" class="form-control" placeholder="نزدیک">
-        </div>
-        <button type="submit" class="btn btn-default btn-search">جستجو</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-sign-in"></i> ورود</a></li>
-         <li><a href="#"><i class="fa fa-user"></i> ثبت نام</a></li>
-       
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-	<nav class="nav-right">
-    	
-    </nav>
- 	<!-- slider start -->   
-	<div class="rotator" dir="ltr">
+            <div class="rotator">
                 <ul id="rotmenu">
                     <li>
                         <a href="rot1">Portfolio</a>
@@ -150,15 +138,17 @@
                 </div>
             </div>
         </div>
-    
-   	
-   
-
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
-<script type="text/javascript">
+        <div class="reference">
+            <p><a href="http://www.flickr.com/photos/jrparis/106493273/">1 http://www.flickr.com/photos/jrparis/106493273/</a></p>
+            <p><a href="http://www.flickr.com/photos/aussiegall/2104652119/">2 http://www.flickr.com/photos/aussiegall/2104652119/</a></p>
+            <p><a href="http://www.flickr.com/photos/intherough/4396089594/">3 http://www.flickr.com/photos/intherough/4396089594/</a></p>
+            <p><a href="http://www.flickr.com/photos/lightknight/628680053/">4 http://www.flickr.com/photos/lightknight/628680053/</a></p>
+            <p><a href="http://www.flickr.com/photos/nguyendai/404631197/">5 http://www.flickr.com/photos/nguyendai/404631197/</a></p>
+        </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
             $(function() {
                 var current = 1;
                 
@@ -220,5 +210,5 @@
                 }
             });
         </script>
-</body>
+    </body>
 </html>
