@@ -44,6 +44,21 @@ body{
 	top:0;
 	height:100%;
 	border-left:1px solid #5A5A5A;
+	padding-top:80px;
+	}
+.nav-right a{
+	color:#ccc;
+	font-size:13px;
+	}
+.nav-right p{
+	margin-bottom:0;
+	}
+.nav-ico{
+	margin-bottom:25px;
+	}	
+.nav-right a:hover{
+	color:#FACE0E;
+	text-decoration:none;
 	}
 .navbar-brand{
 	padding:2px;

@@ -56,8 +56,29 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-	<nav class="nav-right">
-    	
+	<nav class="nav-right text-center">
+    	<div class="nav-ico">
+        	<img src="images/logo.png" width="40">
+        </div>
+        <hr>
+    	<div class="nav-ico">
+        	<a>
+        		<p><i class="fa fa-list"></i></p>
+                <p>فهرست مشاغل</p>
+            </a>
+        </div>
+        <div class="nav-ico">
+        	<a>
+        		<p><i class="fa fa-plus"></i></p>
+                <p>درج آگهی</p>
+            </a>
+        </div>
+        <div class="nav-ico">
+        	<a>
+        		<p><i class="fa fa-search"></i></p>
+                <p>جستجو</p>
+            </a>
+        </div>
     </nav>
  	<!-- slider start -->   
 	<div class="rotator" dir="ltr">
