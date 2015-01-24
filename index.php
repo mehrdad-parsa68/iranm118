@@ -85,17 +85,13 @@
                         </div>
                     </li>
                     <li>
-                        <a href="rot3">Contact</a>
+                        <a href="rot3">ثبت آگهی رایگان</a>
                         <div style="display:none;">
                             <div class="info_image">3.jpg</div>
-                            <div class="info_heading">Get in touch</div>
+                            
                             <div class="info_description">
-				 At vero eos et accusamus et iusto odio
-				dignissimos ducimus qui blanditiis praesentium
-				voluptatum deleniti atque corrupti quos dolores et
-				quas molestias excepturi sint occaecati cupiditate
-				non provident...
-                                <a href="#" class="more">Read more</a>
+				 با عضویت در بانک مشاغل ایران، رایگان حرفه ی خود را معرفی کنید
+                                
                             </div>
                         </div>
                     </li>
@@ -103,7 +99,7 @@
                         <a href="rot4">Experiments</a>
                         <div style="display:none;">
                             <div class="info_image">4.jpg</div>
-                            <div class="info_heading">We do crazy stuff</div>
+                            
                             <div class="info_description">
 				 At vero eos et accusamus et iusto odio
 				dignissimos ducimus qui blanditiis praesentium
@@ -118,7 +114,7 @@
                         <a href="rot5">Applications</a>
                         <div style="display:none;">
                             <div class="info_image">5.jpg</div>
-                            <div class="info_heading">Working things</div>
+                            
                             <div class="info_description">
                                 At vero eos et accusamus et iusto odio
 				dignissimos ducimus qui blanditiis praesentium 
@@ -207,7 +203,7 @@
                             $(this).remove();
                         });
                     }
-                ).attr('src','images/'+info_elem.find('.info_image').html()).attr('width','1424').attr('height','400')
+                ).attr('src','images/'+info_elem.find('.info_image').html()).attr('width','1424').attr('height','500')
                 );
                 }
             });
