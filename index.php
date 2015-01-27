@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="?page=home">
       	<img src="images/logo.png" width="50">
       </a>
     </div>
@@ -49,8 +49,8 @@
         <button type="submit" class="btn btn-default btn-search">جستجو</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-sign-in"></i> ورود</a></li>
-         <li><a href="#"><i class="fa fa-user"></i> ثبت نام</a></li>
+        <li><a href="?page=signin"><i class="fa fa-sign-in"></i> ورود</a></li>
+         <li><a href="?page=signup"><i class="fa fa-user"></i> ثبت نام</a></li>
        
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -58,7 +58,12 @@
 </nav>
 	<nav class="nav-right text-center">
     	<div class="nav-ico">
+        <a href="?page=home">
         	<img src="images/logo.png" width="40">
+            <br>
+            <p class="logo">بانک</p>
+            <p class="logo">مشاغل ایران</p>
+        </a>
         </div>
         <hr>
     	<div class="nav-ico">
@@ -79,85 +84,58 @@
                 <p>جستجو</p>
             </a>
         </div>
+        <div class="nav-ico">
+        	<a>
+        		<p><i class="fa fa-dollar"></i></p>
+                <p>تعرفه</p>
+            </a>
+        </div>
+        <div class="nav-ico">
+        	<a href="?page=contact">
+        		<p><i class="fa fa-phone"></i></p>
+                <p>ارتباط با ما</p>
+            </a>
+        </div>
     </nav>
- 	<!-- slider start -->   
-	<div class="rotator" dir="ltr">
-                <ul id="rotmenu">
-                    <li>
-                        <a href="rot1">بانک مشاغل ایران</a>
-                        <div style="display:none;">
-                            <div class="info_image">1.jpg</div>
-                            
-                            <div class="info_description">
-				 مرجع کامل مشاغل ایران  
-                                
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="rot2">جستجوی پیشرفته</a>
-                        <div style="display:none;">
-                            <div class="info_image">2.jpg</div>
-                            
-                            <div class="info_description">
-				با جستجوی پیشرفته تنها با یک کلیک به نتیجه مورد نظر دست پیدا کنید
-                               
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="rot3">ثبت آگهی رایگان</a>
-                        <div style="display:none;">
-                            <div class="info_image">3.jpg</div>
-                            
-                            <div class="info_description">
-				 با عضویت در بانک مشاغل ایران، رایگان حرفه ی خود را معرفی کنید
-                                
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="rot4">Experiments</a>
-                        <div style="display:none;">
-                            <div class="info_image">4.jpg</div>
-                            
-                            <div class="info_description">
-				 At vero eos et accusamus et iusto odio
-				dignissimos ducimus qui blanditiis praesentium
-				voluptatum deleniti atque corrupti quos dolores et
-				quas molestias excepturi sint occaecati cupiditate
-				non provident...
-                                <a href="#" class="more">Read more</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="rot5">Applications</a>
-                        <div style="display:none;">
-                            <div class="info_image">5.jpg</div>
-                            
-                            <div class="info_description">
-                                At vero eos et accusamus et iusto odio
-				dignissimos ducimus qui blanditiis praesentium 
-				voluptatum deleniti atque corrupti quos dolores et 
-				quas molestias excepturi sint occaecati cupiditate 
-				non provident... 
-                                <a href="#" class="more">Read more</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div id="rot1">
-                    <img src="" width="800" height="300" class="bg" alt=""/>
-                    <div class="heading">
-                        <h1></h1>
-                    </div>
-                    <div class="description">
-                        <p></p>
+    <div class="main">
+    
+ 		<?php
+	if(isset($_GET['page'])){
+	  if(is_file('include/'.$_GET['page'].'.php')){
+		  include 'include/'.$_GET['page'].'.php';
+		  }else{
+		  die('صفحه مورد نظر وجود ندارد');
+		  }
+	  }else{
+		  include 'include/home.php';
+		  }
 
-                    </div>    
-                </div>
-            </div>
+
+?>
+	<div class="container category">
+    	<ul>
+        	<li><a class="cat-1" href="#"></a></li>
+            <li><a class="cat-2" href="#"></a></li>
+            <li><a class="cat-3" href="#"></a></li>
+            <li><a class="cat-4" href="#"></a></li>
+            <li><a class="cat-5" href="#"></a></li>
+            <li><a class="cat-6" href="#"></a></li>
+            <li><a class="cat-7" href="#"></a></li>
+            <li><a class="cat-8" href="#"></a></li>
+            <li><a class="cat-9" href="#"></a></li>
+            <li><a class="cat-10" href="#"></a></li>
+            <li><a class="cat-11" href="#"></a></li>
+            <li><a class="cat-12" href="#"></a></li>
+            <li><a class="cat-13" href="#"></a></li>
+            <li><a class="cat-14" href="#"></a></li>
+            <li><a class="cat-15" href="#"></a></li>
+            <li><a class="cat-16" href="#"></a></li>
+            <li><a class="cat-17" href="#"></a></li>
+            <li><a class="cat-18" href="#"></a></li>
+           
+        </ul>
+    </div>
+
         </div>
     <footer>
     	<div class="container text-center">

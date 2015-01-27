@@ -41,12 +41,11 @@ body{
 .nav-right {
 	width:80px;
 	background-color:#2F2F2F;
-	border:1px solid #000 !important;
 	right:0;
 	position:fixed;
 	top:0;
 	height:100%;
-	border-left:1px solid #5A5A5A;
+	border-left:1px solid #FACE0E;
 	padding-top:80px;
 	}
 .nav-right a{
@@ -59,6 +58,10 @@ body{
 .nav-ico{
 	margin-bottom:25px;
 	}	
+.logo {
+	color:#FACE0E;
+	font-size:16px;
+	}
 .nav-right a:hover{
 	color:#FACE0E;
 	text-decoration:none;
@@ -67,7 +70,7 @@ body{
 	padding:2px;
 	}
 footer{
-	margin-top:400px;
+
 	border-top:2px solid #FACE0E;
 	background-color:#1D1D1D;
 	color:#FFF;
@@ -110,3 +113,188 @@ footer hr {
 	margin-bottom:0 !important;
 	margin-top:20px;
 	}
+.main{
+	margin-right:80px;
+	margin-top:50px;
+	}
+.contact {
+	margin-top:50px;
+	background-color:#FFF;
+	border:1px solid #fde479;
+	margin-bottom:200px;
+	box-shadow:0 0 1px #ccc; ;
+	}
+.category{
+	margin-top:50px;
+	}
+.category ul li {
+	display:inline-block;
+	list-style-type:none;
+	width:64px;
+	height:64px;
+	}
+.cat-1{
+	background-image:url(../images/category/amoozesh_pajoohesh.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-1:hover {
+	background-image:url(../images/category/amoozesh_pajoohesh_y.png);
+	}
+.cat-2{
+	background-image:url(../images/category/arayeshi_zibaee.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-2:hover {
+	background-image:url(../images/category/arayeshi_zibaee_y.png);
+	}
+.cat-3{
+	background-image:url(../images/category/behdasht_darman.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-3:hover {
+	background-image:url(../images/category/behdasht_darman_y.png);
+	}
+.cat-4{
+	background-image:url(../images/category/chap_tablighat.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-4:hover {
+	background-image:url(../images/category/chap_tablighat_y.png);
+	}
+.cat-5{
+	background-image:url(../images/category/fanavari_etelaat.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-5:hover {
+	background-image:url(../images/category/fanavari_etelaat_y.png);
+	}
+.cat-6{
+	background-image:url(../images/category/hamlonaghl.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-6:hover {
+	background-image:url(../images/category/hamlonaghl_y.png);
+	}
+.cat-7{
+	background-image:url(../images/category/khadamat_majales.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-7:hover {
+	background-image:url(../images/category/khadamat_majales_y.png);
+	}
+.cat-8{
+	background-image:url(../images/category/lavazem_khanegi.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-8:hover {
+	background-image:url(../images/category/lavazem_khanegi_y.png);
+	}
+.cat-9{
+	background-image:url(../images/category/mashin_abzar.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-9:hover {
+	background-image:url(../images/category/mashin_abzar_y.png);
+	}
+.cat-10{
+	background-image:url(../images/category/moshavere.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-10:hover {
+	background-image:url(../images/category/moshavere_y.png);
+	}
+.cat-11{
+	background-image:url(../images/category/otomobil.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-11:hover {
+	background-image:url(../images/category/otomobil_y.png);
+	}
+.cat-12{
+	background-image:url(../images/category/pooshak.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-12:hover {
+	background-image:url(../images/category/pooshak_y.png);
+	}
+.cat-13{
+	background-image:url(../images/category/restooran.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-13:hover {
+	background-image:url(../images/category/restooran_y.png);
+	}
+.cat-14{
+	background-image:url(../images/category/safar_gardeshgari.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-14:hover {
+	background-image:url(../images/category/safar_gardeshgari_y.png);
+	}
+.cat-15{
+	background-image:url(../images/category/sakhteman.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-15:hover {
+	background-image:url(../images/category/sakhteman_y.png)
+	}
+.cat-16{
+	background-image:url(../images/category/sanat_madan.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-16:hover {
+	background-image:url(../images/category/sanat_madan_y.png);
+	}
+.cat-17{
+	background-image:url(../images/category/tasisat.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-17:hover {
+	background-image:url(../images/category/tasisat_y.png);
+	}
+.cat-18{
+	background-image:url(../images/category/varzesh_tafrih.png);
+	display:inline-block;
+	width:64px;
+	height:64px;
+	}
+.cat-18:hover {
+	background-image:url(../images/category/varzesh_tafrih_y.png);
+	}
+
+
+
