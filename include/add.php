@@ -27,13 +27,17 @@ if(isset($_POST['submit'])){
 	$email = $_POST['email'];
 	$website = $_POST['website'];
 	$keywords = $_POST['keywords'];
-    $register_date = time();
+	$picture = $_FILES['product_image'];
+    $register_date = time();	
 	
-	
-    if(true){
+    if($picture['error'] == "0"){
 		
-        $advertise_query = "INSERT INTO `advertises`(`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `image`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`) VALUES ('','$name','$cat_id','$sub_cat_id','$slogan','$city_id','$province_id','$image','$address','$phone','$mobile','$email','$website','$keywords','$register_date','','0')";
-		echo $advertise_query;
+		$picture['name'] = time().'.jpg';
+		$address = "images/advertise/$picture[name]";
+		move_uploaded_file($picture['tmp_name'],$address);
+		
+        $advertise_query = "INSERT INTO `advertises`(`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `image`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`) VALUES ('','$name','$cat_id','$sub_cat_id','$slogan','$city_id','$province_id','$picture[name]','$address','$phone','$mobile','$email','$website','$keywords','$register_date','','0')";
+		//echo $advertise_query;
         $advertise_result = mysqli_query($connection , $advertise_query);
         if($advertise_result){
             $error = '
