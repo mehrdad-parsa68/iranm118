@@ -13,30 +13,33 @@ $categories_result = mysqli_query($connection,$categories_query);
 while($categories_row = mysqli_fetch_assoc($categories_result)){
 		$categories .="<option value='$categories_row[id]'>$categories_row[name]</a>";
 	}
-
-
-
-
-					
+				
 if(isset($_POST['submit'])){
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-	$melli_code = $_POST['melli_code'];
-    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $cat_id = $_POST['cat_id'];
+	$sub_cat_id = $_POST['sub_cat_id'];
+    $slogan = $_POST['slogan'];
+	$city_id = $_POST['city_id'];
+    $province_id = $_POST['province_id'];
+    $address = $_POST['address'];
+	$phone = $_POST['phone'];
 	$mobile = $_POST['mobile'];
-    $password = $_POST['password'];
-    $repassword = $_POST['repassword'];
+	$email = $_POST['email'];
+	$website = $_POST['website'];
+	$keywords = $_POST['keywords'];
     $register_date = time();
-    if($password == $repassword){
+	
+	
+    if(true){
 		
-        $user_query = "INSERT INTO `advertises`(`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11],[value-12],[value-13],[value-14],[value-15])";
-		
-        $user_result = mysqli_query($connection , $user_query);
-        if($user_result){
+        $advertise_query = "INSERT INTO `advertises`(`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `image`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`) VALUES ('','$name','$cat_id','$sub_cat_id','$slogan','$city_id','$province_id','$image','$address','$phone','$mobile','$email','$website','$keywords','$register_date','','0')";
+		echo $advertise_query;
+        $advertise_result = mysqli_query($connection , $advertise_query);
+        if($advertise_result){
             $error = '
             <div class="alert alert-success alert-dismissible" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <strong>کاربر گرامی !</strong> ثبت نام با موفقیت انجام شد . خوش آمدید
+              <strong>کاربر گرامی !</strong>ثبت اطلاعات واحد شغلی با موفقیت انجام شد .  
             </div>
             ';
         }
@@ -44,7 +47,7 @@ if(isset($_POST['submit'])){
         $error = '
         <div class="alert alert-danger alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>خطا!</strong> عدم تطابق کلمه عبور با تکرار آن .
+          <strong>خطا!</strong>
         </div>
         ';
     }
@@ -56,7 +59,7 @@ if(isset($_POST['submit'])){
     <div class="col-sm-12">
 		<h2>ثبت اطلاعات واحد شغلی</h2>
    		 <hr>
-         <form class="form-horizontal" method="post">
+         <form class="form-horizontal" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="name" class="col-sm-3 control-label pull-right">نام واحد شغلی</label>
     <div class="col-sm-9">
@@ -70,7 +73,7 @@ if(isset($_POST['submit'])){
       </select>
     </div>
     <div class="col-sm-5">
-      <select type="text" class="form-control pull-right" name="sub_category" id="category">
+      <select type="text" class="form-control pull-right" name="sub_cat_id" id="category">
       	<option value="-1">زمینه فعالیت را انتخاب کنید</option>
         <?php echo $categories; ?>
       </select>
@@ -80,11 +83,11 @@ if(isset($_POST['submit'])){
   <div class="form-group">
     <label for="city" class="col-sm-3 control-label pull-right">استان و شهر</label>
     <div class="col-sm-4">
-      <select type="text" class="form-control pull-right" disabled name="city" id="city">
+      <select type="text" class="form-control pull-right" disabled name="city_id" id="city">
       </select>
     </div>
     <div class="col-sm-5">
-      <select type="text" class="form-control pull-right" name="province" id="province">
+      <select type="text" class="form-control pull-right" name="province_id" id="province">
       	<option value="-1">استان را انتخاب کنید</option>
         <?php echo $provinces; ?>
       </select>
