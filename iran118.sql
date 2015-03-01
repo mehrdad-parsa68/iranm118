@@ -2,8 +2,8 @@
 -- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 01, 2015 at 12:50 PM
+-- Host: 127.0.0.1
+-- Generation Time: Mar 01, 2015 at 03:44 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `advertises` (
   `slogan` varchar(250) NOT NULL,
   `city_id` int(11) NOT NULL,
   `province_id` int(11) NOT NULL,
+  `image` varchar(250) NOT NULL,
   `address` text NOT NULL,
   `phone` varchar(250) NOT NULL,
   `mobile` varchar(250) NOT NULL,
@@ -44,8 +45,16 @@ CREATE TABLE IF NOT EXISTS `advertises` (
   `keywords` varchar(250) NOT NULL,
   `register_date` bigint(20) NOT NULL,
   `google_map` text NOT NULL,
+  `activate` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `advertises`
+--
+
+INSERT INTO `advertises` (`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `image`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`) VALUES
+(1, 'kjnjkn', 1, 1, 'knlkn', 20, 2, '', 'kmnkl``', '13123', '123123', '', 'knlknl', 'lknk - nokn - nkj', 1425220915, '', 0);
 
 -- --------------------------------------------------------
 
