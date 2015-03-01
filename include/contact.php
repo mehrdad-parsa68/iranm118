@@ -1,4 +1,27 @@
-<div class="row">
+<div class="container category">
+    	<ul>
+        	<li><a class="cat-1 cat" href="#" title="آموزش - پژوهش"></a></li>
+            <li><a class="cat-2 cat" href="#" title="آرایش - زیبایی"></a></li>
+            <li><a class="cat-3 cat" href="#" title="بهداشت - درمان"></a></li>
+            <li><a class="cat-4 cat" href="#" title="چاپ - تبلیغات"></a></li>
+            <li><a class="cat-5 cat" href="#" title="فناوری اطلاعات"></a></li>
+            <li><a class="cat-6 cat" href="#" title="حمل و نقل"></a></li>
+            <li><a class="cat-7 cat" href="#" title="خدمات مجالس"></a></li>
+            <li><a class="cat-8 cat" href="#" title="لوازم خانگی"></a></li>
+            <li><a class="cat-9 cat" href="#" title="ماشین - ابزار"></a></li>
+            <li><a class="cat-10 cat" href="#" title="مشاور"></a></li>
+            <li><a class="cat-11 cat" href="#" title="اتومبیل"></a></li>
+            <li><a class="cat-12 cat" href="#" title="پوشاک"></a></li>
+            <li><a class="cat-13 cat" href="#" title="رستوران"></a></li>
+            <li><a class="cat-14 cat" href="#" title="سفر - گردشگری"></a></li>
+            <li><a class="cat-15 cat" href="#" title="ساختمان"></a></li>
+            <li><a class="cat-16 cat" href="#" title="صنعت - معدن"></a></li>
+            <li><a class="cat-17 cat" href="#" title="تاسیسات"></a></li>
+            <li><a class="cat-18 cat" href="#" title="ورزش - تفریح"></a></li>
+           
+        </ul>
+    </div>
+<div>
 	<div class="col-md-8 col-md-offset-2 contact">
 		<h2>ارتباط با ما</h2>
    		 <hr>

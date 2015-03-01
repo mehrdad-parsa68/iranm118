@@ -1,3 +1,16 @@
+<?php  
+	require_once('core/core.php');
+	$province_query = " SELECT * FROM `province`" ;
+	$province_result = mysqli_query($connection,$province_query);
+	
+	function convertIdToName($connection,$id,$tableName){
+		$query = " SELECT name FROM `$tableName` WHERE id = '$id' LIMIT 1"  ;
+		$result = mysqli_query($connection,$query);
+		$row = mysqli_fetch_assoc($result);
+		return $row['name'];
+		}
+	if(isset($_SESSION['MM_ID'])){}
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -12,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/component.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,6 +33,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="js/jquery.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -38,9 +53,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#"><i class="fa fa-plus" style="font-size:14px"></i> ثبت آگهی رایگان در سایت</a></li>
-      </ul>
+      
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="شغل، زمینه فعالیت یا تلفن">
@@ -48,11 +61,98 @@
         </div>
         <button type="submit" class="btn btn-default btn-search">جستجو</button>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="?page=signin"><i class="fa fa-sign-in"></i> ورود</a></li>
+      <ul class="nav navbar-nav navbar-right cbp-tm-menu" id="cbp-tm-menu">
+      
+      <?php if(isset($_GET['province'])){
+		  $city_query = " SELECT * FROM `city` WHERE province = '$_GET[province]' ; " ;
+		  $city_result = mysqli_query($connection,$city_query);
+      echo '<li>
+              <a href="#" style="padding-right:0px;">';
+			
+              	if(isset($_GET['city'])){
+					echo convertIdToName($connection,$_GET['city'],'city');
+					}else{
+						echo 'همه';
+						}
+			  
+			  echo ' <i class="fa fa-caret-down"></i></a>
+              <ul class="cbp-tm-submenu"> ';   
+            
+			  	while($city_row = mysqli_fetch_assoc($city_result)){
+						echo "<li><a href='?province=$_GET[province]&city=$city_row[id]'>$city_row[name]</a></li>";
+					}
+			 	
+            echo '                     
+              </ul>
+          </li><li><a href="#"> انتخاب شهرستان <i class="fa fa-angle-double-left"></i></a></li>
+       ';
+       }
+       ?>
+       	<li>
+              <a href="#" style="padding-right:0px;">
+              <?php
+              	if(isset($_GET['province'])){
+					echo convertIdToName($connection,$_GET['province'],'province');
+					}else{
+						echo 'همه';
+						}
+			  ?>
+               <i class="fa fa-caret-down"></i></a>
+              <ul class="cbp-tm-submenu">    
+              <?php 
+			  	while($province_row = mysqli_fetch_assoc($province_result)){
+						echo "<li><a href='?province=$province_row[id]'>$province_row[name]</a></li>";
+					}
+			  ?>                  
+              </ul>
+          </li>
+         <li><a href="#"> انتخاب استان <i class="fa fa-angle-double-left"></i></a></li>
+         <li><a href="?page=signin"><i class="fa fa-sign-in"></i> ورود</a></li>
          <li><a href="?page=signup"><i class="fa fa-user"></i> ثبت نام</a></li>
+         
        
       </ul>
+     <!-- <ul id="cbp-tm-menu" class="cbp-tm-menu">
+          <li>
+              <a href="#">Home</a>
+          </li>
+          <li>
+              <a href="#">Veggie made</a>
+              <ul class="cbp-tm-submenu">
+                  <li><a href="#" class="cbp-tm-icon-archive">Sorrel desert</a></li>
+                  <li><a href="#" class="cbp-tm-icon-cog">Raisin kakadu</a></li>
+                  <li><a href="#" class="cbp-tm-icon-location">Plum salsify</a></li>
+                  <li><a href="#" class="cbp-tm-icon-users">Bok choy celtuce</a></li>
+                  <li><a href="#" class="cbp-tm-icon-earth">Onion endive</a></li>
+                  <li><a href="#" class="cbp-tm-icon-location">Bitterleaf</a></li>
+                  <li><a href="#" class="cbp-tm-icon-mobile">Sea lettuce</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Pepper tatsoi</a>
+              <ul class="cbp-tm-submenu">
+                  <li><a href="#" class="cbp-tm-icon-archive">Brussels sprout</a></li>
+                  <li><a href="#" class="cbp-tm-icon-cog">Kakadu lemon</a></li>
+                  <li><a href="#" class="cbp-tm-icon-link">Juice green</a></li>
+                  <li><a href="#" class="cbp-tm-icon-users">Wine fruit</a></li>
+                  <li><a href="#" class="cbp-tm-icon-earth">Garlic mint</a></li>
+                  <li><a href="#" class="cbp-tm-icon-location">Zucchini garnish</a></li>
+                  <li><a href="#" class="cbp-tm-icon-mobile">Sea lettuce</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Sweet melon</a>
+              <ul class="cbp-tm-submenu">
+                  <li><a href="#" class="cbp-tm-icon-screen">Sorrel desert</a></li>
+                  <li><a href="#" class="cbp-tm-icon-mail">Raisin kakadu</a></li>
+                  <li><a href="#" class="cbp-tm-icon-contract">Plum salsify</a></li>
+                  <li><a href="#" class="cbp-tm-icon-pencil">Bok choy celtuce</a></li>
+                  <li><a href="#" class="cbp-tm-icon-article">Onion endive</a></li>
+                  <li><a href="#" class="cbp-tm-icon-clock">Bitterleaf</a></li>
+              </ul>
+          </li>
+      </ul>-->
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -67,13 +167,13 @@
         </div>
         <hr>
     	<div class="nav-ico">
-        	<a>
+        	<a href="?page=categories">
         		<p><i class="fa fa-list"></i></p>
                 <p>فهرست مشاغل</p>
             </a>
         </div>
         <div class="nav-ico">
-        	<a>
+        	<a href="?page=add">
         		<p><i class="fa fa-plus"></i></p>
                 <p>درج آگهی</p>
             </a>
@@ -97,7 +197,7 @@
             </a>
         </div>
     </nav>
-    <div class="main">
+    <section class="main">
     
  		<?php
 	if(isset($_GET['page'])){
@@ -112,31 +212,9 @@
 
 
 ?>
-	<div class="container category">
-    	<ul>
-        	<li><a class="cat-1" href="#"></a></li>
-            <li><a class="cat-2" href="#"></a></li>
-            <li><a class="cat-3" href="#"></a></li>
-            <li><a class="cat-4" href="#"></a></li>
-            <li><a class="cat-5" href="#"></a></li>
-            <li><a class="cat-6" href="#"></a></li>
-            <li><a class="cat-7" href="#"></a></li>
-            <li><a class="cat-8" href="#"></a></li>
-            <li><a class="cat-9" href="#"></a></li>
-            <li><a class="cat-10" href="#"></a></li>
-            <li><a class="cat-11" href="#"></a></li>
-            <li><a class="cat-12" href="#"></a></li>
-            <li><a class="cat-13" href="#"></a></li>
-            <li><a class="cat-14" href="#"></a></li>
-            <li><a class="cat-15" href="#"></a></li>
-            <li><a class="cat-16" href="#"></a></li>
-            <li><a class="cat-17" href="#"></a></li>
-            <li><a class="cat-18" href="#"></a></li>
-           
-        </ul>
-    </div>
-
-        </div>
+	
+    </section>
+    <div class="clearfix"></div>
     <footer>
     	<div class="container text-center">
         	<div class="col-sm-8 pull-right">
@@ -159,7 +237,11 @@
             </div>
             <div class="col-sm-4 pull-right">
            		<h2>ارتباط با ما</h2>
-                <hr>
+                <hr>	
+                <p>آدرس : خیابان شهید بهشتی ، بعد از خیابان میرعماد، پلاک 294، طبقه پنجم ، واحد 501</p>
+                <p>تلفن : 88759591 - 021</p>
+                <p>خط ویژه : 88507922 - 021</p>
+                
             </div>
         </div>
         
@@ -172,71 +254,14 @@
    	
    
 
-<script src="js/jquery.js"></script>
+
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
-<script type="text/javascript">
-            $(function() {
-                var current = 1;
-                
-                var iterate		= function(){
-                    var i = parseInt(current+1);
-                    var lis = $('#rotmenu').children('li').size();
-                    if(i>lis) i = 1;
-                    display($('#rotmenu li:nth-child('+i+')'));
-                }
-                display($('#rotmenu li:first'));
-                var slidetime = setInterval(iterate,3000);
-				
-                $('#rotmenu li').bind('click',function(e){
-                    clearTimeout(slidetime);
-                    display($(this));
-                    e.preventDefault();
-                });
-				
-                function display(elem){
-                    var $this 	= elem;
-                    var repeat 	= false;
-                    if(current == parseInt($this.index() + 1))
-                        repeat = true;
-					
-                    if(!repeat)
-                        $this.parent().find('li:nth-child('+current+') a').stop(true,true).animate({'marginRight':'-20px'},300,function(){
-                            $(this).animate({'opacity':'0.7'},700);
-                        });
-					
-                    current = parseInt($this.index() + 1);
-					
-                    var elem = $('a',$this);
-                    
-                        elem.stop(true,true).animate({'marginRight':'0px','opacity':'1.0'},300);
-					
-                    var info_elem = elem.next();
-                    $('#rot1 .heading').animate({'left':'-420px'}, 500,'easeOutCirc',function(){
-                        $('h1',$(this)).html(info_elem.find('.info_heading').html());
-                        $(this).animate({'left':'0px'},400,'easeInOutQuad');
-                    });
-					
-                    $('#rot1 .description').animate({'bottom':'-270px'},500,'easeOutCirc',function(){
-                        $('p',$(this)).html(info_elem.find('.info_description').html());
-                        $(this).animate({'bottom':'0px'},400,'easeInOutQuad');
-                    })
-                    $('#rot1').prepend(
-                    $('<img/>',{
-                        style	:	'opacity:0',
-                        className : 'bg'
-                    }).load(
-                    function(){
-                        $(this).animate({'opacity':'1'},600);
-                        $('#rot1 img:first').next().animate({'opacity':'0'},700,function(){
-                            $(this).remove();
-                        });
-                    }
-                ).attr('src','images/'+info_elem.find('.info_image').html()).attr('width','1424').attr('height','400')
-                );
-                }
-            });
-        </script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/cbpTooltipMenu.min.js"></script>
+<script>
+	var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+</script>
 </body>
 </html>
