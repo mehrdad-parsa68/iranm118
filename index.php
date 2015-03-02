@@ -107,9 +107,18 @@
               </ul>
           </li>
          <li><a href="#"> انتخاب استان <i class="fa fa-angle-double-left"></i></a></li>
-         <li><a href="?page=signin"><i class="fa fa-sign-in"></i> ورود</a></li>
-         <li><a href="?page=signup"><i class="fa fa-user"></i> ثبت نام</a></li>
-         
+         <?php 
+			 if(!isset($_SESSION['MM_ID'])){
+				 echo '<li><a href="?page=signin"><i class="fa fa-sign-in"></i> ورود</a></li>
+				 	   <li><a href="?page=signup"><i class="fa fa-user"></i> ثبت نام</a></li>';
+			 }else{
+				 $user_query = "SELECT * FROM users WHERE id = '$_SESSION[MM_ID]' ; ";
+				 $user_result = mysqli_query($connection , $user_query);
+				 $user_row = mysqli_fetch_assoc($user_result);
+				 echo '<li><a href="signout.php"><i class="fa fa-sign-out"></i> خروج</a></li>
+				 	   <li><a href="?page=add"><i class="fa fa-user"></i> '.$user_row['first_name'].' '.$user_row['last_name'].'</a></li>';
+				 }
+         ?>
        
       </ul>
      <!-- <ul id="cbp-tm-menu" class="cbp-tm-menu">
