@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 		$user_row = mysqli_fetch_assoc($user_result);
 		if($user_row){
 			$_SESSION['MM_ID'] = $user_row['id'];
-			header('Location: index.php?page=mypage');
+			header('Location: index.php?page=add');
 		}
 
 	    else{

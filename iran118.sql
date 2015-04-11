@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2015 at 03:44 PM
--- Server version: 5.6.12-log
--- PHP Version: 5.4.12
+-- Generation Time: Mar 03, 2015 at 12:01 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `iran118`
 --
-CREATE DATABASE IF NOT EXISTS `iran118` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `iran118`;
 
 -- --------------------------------------------------------
 
@@ -599,8 +597,8 @@ CREATE TABLE IF NOT EXISTS `sub_category` (
 --
 
 INSERT INTO `sub_category` (`id`, `name`, `category_id`) VALUES
-(1, 'فثسف', 1),
-(2, 'شسیشسی', 1);
+(1, 'آرایشگاه', 1),
+(2, 'پیرایشگاه', 1);
 
 -- --------------------------------------------------------
 
@@ -618,19 +616,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(250) NOT NULL,
   `register_date` bigint(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `melli_code`, `email`, `mobile`, `password`, `register_date`) VALUES
-(1, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858039),
-(2, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858104),
-(3, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858192),
-(4, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858230),
-(5, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858259),
-(6, 'mehrdad', 'parsa', '5154', 'mehrdad.parsa68@gmail.com', '3234234234', '123', 1425194743);
+(7, 'پویا', 'صبرآموز', '0012432385', 'pooya_alen1990@yahoo.com', '09361946269', '1234568', 1425331132);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

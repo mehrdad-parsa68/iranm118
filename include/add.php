@@ -1,4 +1,10 @@
 <?php
+
+if(!isset($_SESSION['MM_ID'])){
+ header('Location: ?page=signup');
+}
+			 
+			 
 $error = '';
 
 $provinces = '';
