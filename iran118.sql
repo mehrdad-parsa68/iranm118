@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `iran118`
+-- Database: `tm118_new`
 --
-CREATE DATABASE IF NOT EXISTS `iran118` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `iran118`;
+CREATE DATABASE IF NOT EXISTS `tm118_new` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `tm118_new`;
 
 -- --------------------------------------------------------
 
